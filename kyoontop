@@ -1,12 +1,12 @@
 if game.PlaceId == 8304191830 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "KaosHub |[RELEASE] Anime Adventures", HidePremium = false, IntroEnabled = true,IntroText = "KaosHub", SaveConfig = true, ConfigFolder = "KaosHub"})
+local Window = OrionLib:MakeWindow({Name = "<font color='rgb(255, 20, 147)'>Kaos</font> | Anime Adventures", HidePremium = false, IntroEnabled = true,IntroText = "<font color='rgb(255, 20, 147)'>Kaos Hub</font>", SaveConfig = true, ConfigFolder = "Kaos Hub"})
 
 
 OrionLib:MakeNotification({
-	Name = "KaosHub",
+	Name = "Kaos",
 	Content = "Welcome " .. game.Players.LocalPlayer.Name .. " to KaosHub",
-	Image = "",
+	Image = "rbxassetid://4384403532",
 	Time = 5
 })
 
@@ -16,22 +16,34 @@ OrionLib:MakeNotification({
 
 --Functions
 
+---- Get Pet ID ----
 
-
-
+for i, v in next, workspace[game.Players.LocalPlayer.Name]["_pets_folder"]:GetChildren() do
+    if v:IsA("Model") then
+        setclipboard(v.Name)
+    end
+end
 
 
 
 --Tabs
 
 local aa = Window:MakeTab({
-	Name = "Main",
-	Icon = "",
+	Name = "<font color='rgb(219, 112, 147)'>Main</font>",
+	Icon = "rbxassetid://4370345144",
 	PremiumOnly = false
 })
 
 
 --Toggles
+
+
+
+
+
+
+
+
 
 aa:AddToggle({
 	Name = "Auto Abilities",
@@ -117,6 +129,13 @@ aa:AddDropdown({
         Options = Value
 })
 
+aa:AddButton({
+	Name = "Hide Name",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Head:FindFirstChild("_overhead") 
+        workspace[game.Players.LocalPlayer.Name].Head["_overhead"]:Destroy()
+  	end    
+})
 
 
 local function getClosest()
@@ -135,11 +154,305 @@ local function getClosest()
 end
 
 
+local fa = Window:MakeTab({
+	Name = "<font color='rgb(219, 112, 147)'>Farm</font>",
+	Icon = "rbxassetid://3944688398",
+	PremiumOnly = false
+})
+
+fa:AddLabel("<font color='rgb(255, 20, 147)'>AutoFarm Information!</font>, Unit has to be in slot 1")
+fa:AddLabel("Put it in AutoExec & Auto Attach Folder if its not Working")
+fa:AddLabel("Status : [🔴]")
+
+fa:AddDropdown({
+	Name = "Planet Namak [Luffy] [Normal]",
+	Default = "",
+	Options = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6"},
+	Callback = function(State)
+		if State == "Level 1" then
+getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}" -- Place your ID in here "{123456d-123c-1234-123456789}"
+getgenv().unit = "luffy" -- Change this to your Unit name e.g. "luffy" "erwin" "sanji"
+getgenv().hidename = false -- Hide name
+getgenv().dif = "Normal" -- Normal = less exp and easier. Hard = more exp and much harder
+getgenv().act = "namek_level_1" -- Change the number to suit your level
+loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+        elseif State == "Level 2" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}" -- Place your ID in here "{123456d-123c-1234-123456789}"
+getgenv().unit = "luffy" -- Change this to your Unit name e.g. "luffy" "erwin" "sanji"
+getgenv().hidename = false -- Hide name
+getgenv().dif = "Normal" -- Normal = less exp and easier. Hard = more exp and much harder
+getgenv().act = "namek_level_2" -- Change the number to suit your level
+loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+elseif State == "Level 3" then
+    getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}" -- Place your ID in here "{123456d-123c-1234-123456789}"
+getgenv().unit = "luffy" -- Change this to your Unit name e.g. "luffy" "erwin" "sanji"
+getgenv().hidename = false -- Hide name
+getgenv().dif = "Normal" -- Normal = less exp and easier. Hard = more exp and much harder
+getgenv().act = "namek_level_3" -- Change the number to suit your level
+loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+elseif State == "Level 4" then
+    getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}" -- Place your ID in here "{123456d-123c-1234-123456789}"
+getgenv().unit = "luffy" -- Change this to your Unit name e.g. "luffy" "erwin" "sanji"
+getgenv().hidename = false -- Hide name
+getgenv().dif = "Normal" -- Normal = less exp and easier. Hard = more exp and much harder
+getgenv().act = "namek_level_4" -- Change the number to suit your level
+loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+elseif State == "Level 5" then
+    getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}" -- Place your ID in here "{123456d-123c-1234-123456789}"
+getgenv().unit = "luffy" -- Change this to your Unit name e.g. "luffy" "erwin" "sanji"
+getgenv().hidename = false -- Hide name
+getgenv().dif = "Normal" -- Normal = less exp and easier. Hard = more exp and much harder
+getgenv().act = "namek_level_5" -- Change the number to suit your level
+loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+elseif State == "Level 6" then
+    getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+getgenv().unit = "luffy" 
+getgenv().hidename = false 
+getgenv().dif = "Normal" 
+getgenv().act = "namek_level_6" 
+loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+        end
+	end    
+})
+
+
+fa:AddDropdown({
+	Name = "Attack On Titan [Luffy] [Normal]",
+	Default = "",
+	Options = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6"},
+	Callback = function(State)
+        if State == "Level 1" then
+        getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+        getgenv().unit = "luffy"
+        getgenv().hidename = false
+        getgenv().dif = "Normal"
+        getgenv().act = "aot_level_1"
+        loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+       
+        elseif State == "Level 2" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+            getgenv().unit = "luffy"
+            getgenv().hidename = false
+            getgenv().dif = "Normal"
+            getgenv().act = "aot_level_2"
+            loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+        elseif State == "Level 3" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+            getgenv().unit = "luffy"
+            getgenv().hidename = false
+            getgenv().dif = "Normal"
+            getgenv().act = "aot_level_3"
+            loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+        elseif State == "Level 4" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+            getgenv().unit = "luffy"
+            getgenv().hidename = false
+            getgenv().dif = "Normal"
+            getgenv().act = "aot_level_4"
+            loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+        elseif State == "Level 5" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+            getgenv().unit = "luffy"
+            getgenv().hidename = false
+            getgenv().dif = "Normal"
+            getgenv().act = "aot_level_5"
+            loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+        elseif State == "Level 6" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+            getgenv().unit = "luffy"
+            getgenv().hidename = false
+            getgenv().dif = "Normal"
+            getgenv().act = "aot_level_6"
+            loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+        end 
+end   
+})
+
+fa:AddDropdown({
+	Name = "Demon Slayer [Luffy] [Normal]",
+	Default = "",
+	Options = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6"},
+	Callback = function(State)
+    if State == "Level 1" then
+        getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+        getgenv().unit = "luffy"
+        getgenv().hidename = false
+        getgenv().dif = "Normal"
+        getgenv().act = "demonslayer_level_1"
+        loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+    elseif State == "Level 2" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+            getgenv().unit = "luffy"
+            getgenv().hidename = false
+            getgenv().dif = "Normal"
+            getgenv().act = "demonslayer_level_2"
+            loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+        elseif State == "Level 3" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+            getgenv().unit = "luffy"
+            getgenv().hidename = false
+            getgenv().dif = "Normal"
+            getgenv().act = "demonslayer_level_3"
+            loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+        elseif State == "Level 4" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+            getgenv().unit = "luffy"
+            getgenv().hidename = false
+            getgenv().dif = "Normal"
+            getgenv().act = "demonslayer_level_4"
+            loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+        elseif State == "Level 5" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+            getgenv().unit = "luffy"
+            getgenv().hidename = false
+            getgenv().dif = "Normal"
+            getgenv().act = "demonslayer_level_5"
+            loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+
+        elseif State == "Level 6" then
+            getgenv().id = "{60649337-0eb7-4ecb-bdf4-ff7feddda33e}"
+            getgenv().unit = "luffy"
+            getgenv().hidename = false
+            getgenv().dif = "Normal"
+            getgenv().act = "demonslayer_level_6"
+            loadstring(game:HttpGet('https://pastebin.com/raw/Kx44hwc6'))()
+	end    
+end
+})
+
+fa:AddParagraph("KaosHub","Infinite Farm")
+
+fa:AddDropdown({
+	Name = "Planet Namak [Erwin] [Infinite]",
+	Default = "",
+	Options = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6"},
+	Callback = function(State)
+        if State then
+            getgenv().id = "{d56a7943-5572-40c8-95dc-385bc91d7fc4}"
+    getgenv().unit = "erwin"
+    getgenv().hidename = false
+    getgenv().dif = "Hard"
+    getgenv().act = "namek_infinite"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SmellLikeHacker/Anime-Adventures/main/SorryImCopying"))()
+    
+        else
+            getgenv().id = "{d56a7943-5572-40c8-95dc-385bc91d7fc4}"
+    getgenv().unit = "erwin"
+    getgenv().hidename = false
+    getgenv().dif = "Hard"
+    getgenv().act = "namek_infinite"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/SmellLikeHacker/Anime-Adventures/main/SorryImCopying"))()
+	end    
+end
+})
+
+fa:AddDropdown({
+	Name = "Attack On Titan [Erwin] [Infinite]",
+	Default = "",
+	Options = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6"},
+	Callback = function(State)
+        if State then
+            getgenv().id = "{d56a7943-5572-40c8-95dc-385bc91d7fc4}"
+     getgenv().unit = "erwin"
+     getgenv().hidename = false
+     getgenv().dif = "Hard"
+     getgenv().act = "aot_infinite"
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/SmellLikeHacker/Anime-Adventures/main/SorryImCopying"))()
+     
+         else
+             getgenv().id = "{d56a7943-5572-40c8-95dc-385bc91d7fc4}"
+     getgenv().unit = "erwin"
+     getgenv().hidename = false
+     getgenv().dif = "Hard"
+     getgenv().act = "aot_infinite"
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/SmellLikeHacker/Anime-Adventures/main/SorryImCopying"))()
+	end    
+end
+})
+
+fa:AddDropdown({
+	Name = "Demon Slayer [Erwin] [Infinite]",
+	Default = "",
+	Options = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6"},
+	Callback = function(State)
+        if State then
+            getgenv().id = "{d56a7943-5572-40c8-95dc-385bc91d7fc4}"
+     getgenv().unit = "erwin"
+     getgenv().hidename = false
+     getgenv().dif = "Hard"
+     getgenv().act = "demonslayer_infinite"
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/SmellLikeHacker/Anime-Adventures/main/SorryImCopying"))()
+     
+         else
+             getgenv().id = "{d56a7943-5572-40c8-95dc-385bc91d7fc4}"
+     getgenv().unit = "erwin"
+     getgenv().hidename = false
+     getgenv().dif = "Hard"
+     getgenv().act = "demonslayer_infinite"
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/SmellLikeHacker/Anime-Adventures/main/SorryImCopying"))()
+	end    
+end
+})
+
+local m = Window:MakeTab({
+	Name = "<font color='rgb(219, 112, 147)'>Quests</font>",
+	Icon = "rbxassetid://4370344717",
+	PremiumOnly = false
+})
+
+m:AddButton({
+	Name = "Complete All Quests",
+	Callback = function()
+local args = {
+    [1] = "{81c8c66d-78db-4db2-9983-02899b555ff5}"
+}
+
+game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_quest:InvokeServer(unpack(args))
+
+
+
+local args = {
+    [1] = "{e5d4dad7-ed8e-4786-9e84-4815ee3eb104}"
+}
+
+game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_quest:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = "{17dd892e-fcb0-4adf-b728-8e6c0dbd4721}"
+}
+
+game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_quest:InvokeServer(unpack(args))
+
+
+local args = {
+    [1] = "{634f2374-e1ce-45f5-bd90-2eac44ab24b6}"
+}
+
+game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_quest:InvokeServer(unpack(args))
+end
+})
+
+
+
 
 
 local b = Window:MakeTab({
-	Name = "Player",
-	Icon = "rbxassetid://4483345998",
+	Name = "<font color='rgb(219, 112, 147)'>Player</font>",
+	Icon = "rbxassetid://6961018885",
 	PremiumOnly = false
 })
 
@@ -203,15 +516,116 @@ b:AddButton({
 b:AddButton({
 	Name = "Redeem All Codes",
 	Callback = function()
-        loadstring(game:HttpGet('https://pastebin.com/raw/fWVs9x0W'))()
+        local args = {
+            [1] = "MARINEFORD"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        
+        local args = {
+            [1] = "subtomaokuma"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        local args = {
+            [1] = "subtosnowrbx"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait(0)
+        --------------------------------------------------------2
+        local args = {
+            [1] = "CHALLENGEFIX"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        --------------------------------------------------------3
+        local args = {
+            [1] = "TWOMILLION"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        --------------------------------------------------------4
+        local args = {
+            [1] = "SORRYFORSHUTDOWN"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        --------------------------------------------------------5
+        local args = {
+            [1] = "RELEASE"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait(0)
+        --------------------------------------------------------6
+        local args = {
+            [1] = "KingLuffy"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        --------------------------------------------------------7
+        local args = {
+            [1] = "TOADBOIGAMING"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        --------------------------------------------------------8
+        local args = {
+            [1] = "GINYUFIX"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        --------------------------------------------------------9
+        local args = {
+            [1] = "Cxrsed"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        --------------------------------------------------------10
+        local args = {
+            [1] = "FictioNTheFirst"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        --------------------------------------------------------11
+        local args = {
+            [1] = "SubToBlamspot"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        --------------------------------------------------------12
+        local args = {
+            [1] = "SubToKelvingts"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        local args = {
+            [1] = "noclypso"
+        }
+        
+        game:GetService("ReplicatedStorage").endpoints.client_to_server.redeem_code:InvokeServer(unpack(args))
+        wait (0)
+        --------------------------------------------------------End
   	end    
 })
 
 
 
 local c = Window:MakeTab({
-	Name = "Miscellaneous",
-	Icon = "rbxassetid://4483345998",
+	Name = "<font color='rgb(219, 112, 147)'>Miscellaneous</font>",
+	Icon = "rbxassetid://4483362748",
 	PremiumOnly = false
 })
 
@@ -275,8 +689,8 @@ Enabled = false
 
 
 local y = Window:MakeTab({
-	Name = "Settings",
-	Icon = "rbxassetid://4483345998",
+	Name = "<font color='rgb(219, 112, 147)'>Settings</font>",
+	Icon = "rbxassetid://4483345737",
 	PremiumOnly = false
 })
 
@@ -320,15 +734,15 @@ y:AddButton({
 
 
 local zz = Window:MakeTab({
-	Name = "Credits",
-	Icon = "rbxassetid://4483345998",
+	Name = "<font color='rgb(219, 112, 147)'>Credits</font>",
+	Icon = "rbxassetid://4483345278",
 	PremiumOnly = false
 })
 
 
 
 
-zz:AddLabel("Developer: kyo#6490")
+zz:AddLabel("Developer: <font color='rgb(0, 255, 255)'>kyo#6490</font>")
 
 zz:AddButton({
 	Name = "Discord Invite",
@@ -338,17 +752,35 @@ setclipboard("https://discord.gg/6422MX4bPE")
 OrionLib:MakeNotification({
     Name = "KaosHub",
     Content = "Copied Discord Invite!",
-    Image = "",
+    Image = "rbxassetid://4384403532",
     Time = 5
 })
 end
 })
 
+local log = Window:MakeTab({
+	Name = "<font color='rgb(219, 112, 147)'>Changelog</font>",
+	Icon = "rbxassetid://4370346095",
+	PremiumOnly = false
+})
+
+
+
+log:AddLabel("- Version 0.3")
+log:AddLabel("- AutoFarm Patched (Devs are retarted)")
+log:AddLabel("- Updated UI Design")
+log:AddLabel("- Quest Patched")
+log:AddLabel("- Jump Power patched")
+log:AddLabel("- Fixed Autofarm")
+
+log:AddLabel("- Fixed Redeem Codes")
+log:AddLabel("                                      Script Status : [🟢]                            ")
+
 
 
 elseif game.PlaceId == 2788229376 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "KaosHub | Da Hood", HidePremium = false, IntroEnabled = true,IntroText = "KaosHub", SaveConfig = true, ConfigFolder = "KaosHub"})
+local Window = OrionLib:MakeWindow({Name = "<font color='rgb(255, 20, 147)'>Kaos</font> | Da Hood", HidePremium = false, IntroEnabled = true,IntroText = "<font color='rgb(219, 112, 147)'>KaosHub</font>", SaveConfig = true, ConfigFolder = "<font color='rgb(219, 112, 147)'>Save Kaos</font>"})
 
 
 
@@ -375,14 +807,14 @@ getgenv().antilockspeed = 0.260319
 OrionLib:MakeNotification({
         Name = "KaosHub",
         Content = "Welcome " .. game.Players.LocalPlayer.Name .. " to KaosHub",
-        Image = "",
+        Image = "rbxassetid://4384403532",
         Time = 5
     })
 
 
     local uu = Window:MakeTab({
-        Name = "Main",
-        Icon = "rbxassetid://4483345998",
+        Name = "<font color='rgb(219, 112, 147)'>Main</font>",
+        Icon = "rbxassetid://4370345144",
         PremiumOnly = false
     })
     
@@ -486,8 +918,8 @@ OrionLib:MakeNotification({
 
 
     local L_12_ = Window:MakeTab({
-        Name = "Teleports",
-        Icon = "",
+        Name = "<font color='rgb(219, 112, 147)'>Teleports</font>",
+        Icon = "rbxassetid://3944688398",
         PremiumOnly = false
     })
 
@@ -1076,7 +1508,7 @@ OrionLib:MakeNotification({
         end
     })
     local a = Window:MakeTab({
-        Name = "Locks",
+        Name = "<font color='rgb(219, 112, 147)'>Aimlock</font>",
         Icon = "rbxassetid://4483345998",
         PremiumOnly = false
     })
@@ -1298,7 +1730,7 @@ OrionLib:MakeNotification({
     })
 
 
-    a:AddParagraph("KaosHub","Silent Aim Config")
+    a:AddParagraph("<font color='rgb(219, 112, 147)'>KaosHub</font>","Silent Aim Config")
 
 
 
@@ -1405,8 +1837,8 @@ a:AddTextbox({
 
 
 local jj = Window:MakeTab({
-    Name = "Anti Stuff",
-    Icon = "",
+    Name = "<font color='rgb(219, 112, 147)'>Bypass Anti</font>",
+    Icon = "rbxassetid://6961018885",
     PremiumOnly = false
 })
 
@@ -1580,8 +2012,8 @@ jj:AddButton({
 
 
 local b = Window:MakeTab({
-	Name = "Miscellaneous",
-	Icon = "",
+	Name = "<font color='rgb(219, 112, 147)'>Miscellaneous</font>",
+	Icon = "rbxassetid://3944688398",
 	PremiumOnly = false
 })
 
@@ -1754,8 +2186,8 @@ b:AddButton({
 
 
 local c = Window:MakeTab({
-	Name = "Players",
-	Icon = "",
+	Name = "<font color='rgb(219, 112, 147)'>Player</font>",
+	Icon = "rbxassetid://6961018885",
 	PremiumOnly = false
 })
 
@@ -1799,8 +2231,8 @@ c:AddToggle({
 })
 
 local vs = Window:MakeTab({
-    Name = "Visuals",
-    Icon = "",
+    Name = "<font color='rgb(219, 112, 147)'>Visuals</font>",
+    Icon = "rbxassetid://4370346095",
     PremiumOnly = false
 })
 
@@ -1956,7 +2388,7 @@ vs:AddDropdown({
 
 
 
-        vs:AddParagraph("Other","")
+        vs:AddParagraph("<font color='rgb(219, 112, 147)'>Other</font>","")
 
 
 
@@ -2050,8 +2482,8 @@ vs:AddButton({
 
 
     local cr = Window:MakeTab({
-        Name = "Credits",
-        Icon = "",
+        Name = "<font color='rgb(219, 112, 147)'>Credits</font>",
+        Icon = "rbxassetid://4483345278",
         PremiumOnly = false
     })
 
@@ -2071,9 +2503,228 @@ cr:AddButton({
 
 
 
+
+
+
+elseif game.PlaceId == 9551640993 then
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+    local Window = OrionLib:MakeWindow({Name = "<font color='rgb(255, 20, 147)'>Kaos</font> | Mining Simulator 2", HidePremium = false, IntroEnabled = true,IntroText = "KaosHub", SaveConfig = true, ConfigFolder = "KaosHub"})
+    
+    local a = Window:MakeTab({
+        Name = "Main",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    a:AddToggle({
+        Name = "Auto Mine",
+        Default = false,
+        Callback = function(Value)
+            Value = aa 
+            while aa do task.wait()
+game:GetService("ReplicatedStorage").Events.MineBlock:FireServer(unpack(args))
+end
+end,
+        Enabled = false  
+    })
+    
+
 -- WORKIN W
+elseif game.PlaceId == 5956785391 then
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+    local Window = OrionLib:MakeWindow({Name = "<font color='rgb(255, 20, 147)'>Kaos</font> | Project Slayer", HidePremium = false, IntroEnabled = true,IntroText = "KaosHub", SaveConfig = true, ConfigFolder = "KaosHub"})
+    
+
+    local p = Window:MakeTab({
+        Name = "<font color='rgb(255, 20, 147)'>Main</font>",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    p:AddToggle({
+        Name = "Auto Clan [Kamado]",
+        Default = false,
+        Callback = function(Value)
+            Value = pp
+getgenv().clan = "Kamado" --change this
+
+syn.run_secure_lua("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")
+        end,
+        Enabled = false 
+    })
+
+    p:AddToggle({
+        Name = "Auto Clan [Agatsuma]",
+        Default = false,
+        Callback = function(Value)
+            Value = pp
+getgenv().clan = "Agatsuma" --change this
+
+syn.run_secure_lua("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")
+        end,
+        Enabled = false 
+    })
 
 
+    p:AddToggle({
+        Name = "Auto Clan [Tomioka]",
+        Default = false,
+        Callback = function(Value)
+            Value = pp
+getgenv().clan = "Tomioka" --change this
+
+syn.run_secure_lua("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")
+        end,
+        Enabled = false 
+    })
+
+    local e = Window:MakeTab({
+        Name = "<font color='rgb(255, 20, 147)'>Hubs</font>",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+
+    e:AddButton({
+        Name = "Flare Hub",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/new"))()
+          end    
+    })
+
+
+    e:AddButton({
+        Name = "KeyBrew",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/borntodiekuv/KeybrewHub/main/Main"))()
+          end    
+    })
+
+
+
+    e:AddButton({
+        Name = "KeyBrew",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/borntodiekuv/KeybrewHub/main/Main"))()
+          end    
+    })
+
+
+    local c = Window:MakeTab({
+        Name = "Miscellaneous",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    --tween to somi
+local Time = 10 
+local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = game:GetService("Workspace").Somi.Head.CFrame})                    
+tween:Play()                     tween.Completed:Wait(E)
+
+
+
+
+
+c:AddButton({
+	Name = "Instant Level [risky] [patched]",
+	Callback = function()
+        while true do task.wait()
+            local args = {
+                [1] = "AddQuest",
+                [2] = "Players."..game.Players.LocalPlayer.name..".PlayerGui.Npc_Dialogue.LocalScript.Functions",
+                [3] = 1657956848,
+                [4] = game:GetService("ReplicatedStorage").Player_Data[game.Players.LocalPlayer.Name].Quest,
+                [5] = {
+                    ["Current"] = "Rescue Somi's little sister Riyaku",
+                    ["List"] = {
+                        [1] = {
+                            ["Progress"] = {
+                                [1] = 2,
+                                [2] = 2
+                            },
+                            ["Name"] = "Defeat 2 subordinates while carrying Riyaku"
+                        },
+                        [2] = {
+                            ["Progress"] = {
+                                [1] = 1,
+                                [2] = 1
+                            },
+                            ["Name"] = "Bring Riyaku to somi"
+                        }
+                    }
+                }
+            }
+            game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+  	end  
+end
+
+})
+
+c:AddButton({
+    Name = "Bypass Detection",
+    Callback = function()
+        ---bypass mods detecting unusual activity
+        local eventbypass
+        
+        eventbypass = hookmetamethod(game, "__namecall", function(self, ...)
+            local method = getnamecallmethod()
+            local args = {...}
+        
+            if not checkcaller() and self.Name == "moddelteasdasd123" and method == "FireServer" then
+                print("Project Slayers anti-cheat has been blocked")
+                return;
+            end
+        
+            return eventbypass(self, ...)
+        end)
+      end    
+})
+
+local args = {
+    [1] = "Quest_add",
+    [2] = "Players."..game.Players.LocalPlayer.name..".PlayerGui.Npc_Dialogue.LocalScript.Functions",
+    [3] = 1657956948,
+    [4] = {},
+    [5] = game:GetService("Players").LocalPlayer,
+    [6] = "royakurescuqthinggivebaxcktosomi"
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+
+
+local args = {
+    [1] = true,
+    [2] = 17940.679587696213
+}
+
+game:GetService("ReplicatedStorage").Remotes.moddelteasdasd123:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "removequest",
+    [2] = game:GetService("ReplicatedStorage").Player_Data[game.Players.LocalPlayer.Name].Quest
+}
+
+game:GetService("ReplicatedStorage").Remotes.To_Server.Handle_Initiate_S:FireServer(unpack(args))
+
+elseif game.PlaceId == 5683833663 then
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+    local Window = OrionLib:MakeWindow({Name = "<font color='rgb(255, 20, 147)'>Kaos</font> | Project Slayer", HidePremium = false, IntroEnabled = true,IntroText = "KaosHub", SaveConfig = true, ConfigFolder = "KaosHub"})
+    
+
+    local Tab = Window:MakeTab({
+        Name = "Admin",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    Tab:AddButton({
+        Name = "Admin",
+        Callback = function()
+                  
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+          end    
+    })
 
 end
 OrionLib:Init()
